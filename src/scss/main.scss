@@ -4,10 +4,40 @@
 @import "modules/hello.scss";
 
 body {
-  background: $wtf;
+  background: #3767ad;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
+.header{
+	position:absolute;
+	align-items:center;
+	top:87px;
+	font-family:'Roboto';
+	font-style:normal;
+}
+.counter--js{
+	position:absolute;
+	align-items:center;
+	font-family:'Roboto';
+	font-style:normal;
+
+}
+.add{
+	align-items:center;
+	font-family:'Roboto';
+	font-style:normal;
+	justify-content:center;
+
+}
+
+.substract{
+	align-items:center;
+	font-family:'Roboto';
+	font-style:normal;
+	justify-content:center;
+	flex-direction:wrap;
+}
+
