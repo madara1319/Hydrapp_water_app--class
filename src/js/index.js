@@ -5,5 +5,13 @@ import '../scss/main.scss';
 // registerSW();
 
 /* place your code below */
+const add=document.querySelector('.add');
+const substract=document.querySelector('.substract');
 
-console.log('HELLO 🚀')
+const Click = ()=> {
+	
+	const counter=document.querySelector(".counter--js"); 
+	counter.innerHTML="test";
+	counter.innerHTML.toggle(".counter--js");
+}
+add.addEventListener("click",Click);
