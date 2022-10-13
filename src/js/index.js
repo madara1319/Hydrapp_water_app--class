@@ -6,9 +6,31 @@ import '../scss/main.scss';
 
 /* place your code below */
 
+
 const add=document.querySelector('.add');
 const substract=document.querySelector('.substract');
 var i=0;
+const localCounter=document.querySelector(".counter--js");
+localCounter.innerHTML=`${localStorage.getItem('counter')}`;
+
+
+if (localStorage.getItem('counter')>0){
+	const i=localStorage.getItem('counter');
+
+}
+else 
+{
+	const i=0;
+
+}
+
+const Click = ()=> {
+	localCounter.innerHTML=`${i}`;
+	localStorage.setItem('counter',i);
+}
+
+
+
 
 if (i>=0){
 
@@ -37,33 +59,7 @@ else
 
 }
 
-//if (i<=0){
-//	
-//}
-
-
-const Click = ()=> {
-
-
-	
-	const counter=document.querySelector(".counter--js"); 
-	counter.innerHTML=`${i}`;
-}
-
-
-
-	
-//const counter=document.querySelector(".counter--js");
-//counter.innerHTML=`${i}`;
-
 add.addEventListener("click",Click);
 substract.addEventListener("click",Click);
-
-const currentValue=localStorage.getItem('counter--js');
-let result='';
-if (currentValue){
-	console.log(`Liczba spozytych szklanek wody wynosi ${currentVlaue}`);
-	result=currentValue;
-}
 
 
