@@ -6,37 +6,37 @@ import '../scss/main.scss';
 
 /* place your code below */
 
-
+const localCounter=document.querySelector(".counter--js");
 const add=document.querySelector('.add');
 const substract=document.querySelector('.substract');
-var i=0;
-const localCounter=document.querySelector(".counter--js");
-localCounter.innerHTML=`${localStorage.getItem('counter')}`;
-
-
-if (localStorage.getItem('counter')>0){
-	const i=localStorage.getItem('counter');
-
-}
-else 
-{
-	const i=0;
-
-}
+let i =0;
+i=localStorage.getItem('counter');
 
 const Click = ()=> {
 	localCounter.innerHTML=`${i}`;
 	localStorage.setItem('counter',i);
 }
-
+localCounter.innerHTML=`${localStorage.getItem('counter')}`;
+//
+//if (localStorage.getItem('counter')>0){
+//	const i=localStorage.getItem('counter');
+//}
+//else 
+//{
+//	const i=0;
+//
+//}
+//
+//
 
 
 
 if (i>=0){
 
 	substract.addEventListener("click",()=>{
-		i-=1;
+		i--;
 		console.log(i);
+		console.log(typeof(i));
 		if (i<0) {
 			i=0;
 			console.log(i);
@@ -44,8 +44,9 @@ if (i>=0){
 	})
 
 	add.addEventListener("click",()=>{
-		i+=1;
-		console.log(i);	
+		i++;	
+		console.log(i);
+		console.log(typeof(i));
 		if (i<0) {
 			i=0;
 			console.log(i);
