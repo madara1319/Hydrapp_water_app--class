@@ -14,7 +14,7 @@ body {
 .header{
 	position:absolute;
 	align-items:center;
-	top:87px;
+	top:150px;
 	font-family:'Roboto';
 	font-style:normal;
 }
@@ -29,10 +29,9 @@ body {
 	align-items:center;
 	font-family:'Roboto';
 	font-style:normal;
-	justify-content:center;
 	position:absolute;
 	font-size:18px;
-	top:531px;
+	top:680px;
 	width:216px;
 	height:47px;
 	background:#fff;
@@ -45,7 +44,7 @@ body {
 	font-family:'Roboto';
 	font-style:normal;
 	position:absolute;
-	top:615px;
+	top:740px;
 	font-size:16px;
 	width:184px;
 	height:23px;
@@ -55,4 +54,45 @@ body {
 	font-size:112px;
 	color:#000;
 
+}
+
+.glass{
+	align-items:center;
+	justify-content:center;
+	position:absolute;
+	top:380;
+
+}
+
+.square{
+	width:500px;
+	height:500px;
+	position:absolute;
+	align-items:bottom;
+	background-color:yellow;
+	top:800px;
+	justify-content:center;
+	align-items:center;
+	display:flex;
+}
+.square--inside{
+	width:480px;
+	height:480px;
+	background-color:magenta;
+	top:820px;
+//	animation-name:filling ;
+//	animation-duration:4s ;
+	animation:filling infinite 4s;	
+	transform-origin:bottom ;
+}
+.square--inside:hover{
+	animation-play-state:initial; 	
+}
+@keyframes filling{
+	from{//height:0px; 
+	transform:scale(1,0);
+	width:480px;}
+	to{//height:480px; 
+	transform:scale(1,1);
+	width:480px;}
 }
