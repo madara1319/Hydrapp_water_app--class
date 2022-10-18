@@ -65,8 +65,8 @@ body {
 }
 
 .square{
-	width:500px;
-	height:500px;
+	width:140px;
+	height:140px;
 	position:absolute;
 	align-items:bottom;
 	background-color:yellow;
@@ -76,8 +76,8 @@ body {
 	display:flex;
 }
 .square--inside{
-	width:480px;
-	height:480px;
+	width:120px;
+	height:120px;
 	background-color:magenta;
 	top:820px;
 //	animation-name:filling ;
@@ -91,8 +91,28 @@ body {
 @keyframes filling{
 	from{//height:0px; 
 	transform:scale(1,0);
-	width:480px;}
+	width:120px;}
 	to{//height:480px; 
 	transform:scale(1,1);
-	width:480px;}
+	width:120px;}
 }
+.square2{
+	width:120px;
+	height:120px;
+	align-items:bottom;
+	background-color:lightpink;
+	top:10px;
+	position:absolute;
+	justify-content:center;
+	align-items:center;
+	display:flex;
+
+}
+.square2Inside{
+	width:100px;
+	height:100px;
+	transform-origin:bottom ;
+	background-color:darkgreen;
+//	top:820px;
+}
+
