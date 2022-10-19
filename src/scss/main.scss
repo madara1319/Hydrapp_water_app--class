@@ -63,27 +63,40 @@ body {
 	top:380;
 
 }
+.glass--water{
+	width:150px;
+	height:50px;
+}
 
 .square{
-	width:140px;
-	height:140px;
+	width:110px;
+	border-top:210px solid #eceff1 ;
+	border-left:25px solid transparent ;
+	border-right:25px solid transparent;
+	height:0px;
 	position:absolute;
-	align-items:bottom;
-	background-color:yellow;
+	align-items:flex-end;
+//	background-color:yellow;
 	top:800px;
 	justify-content:center;
-	align-items:center;
 	display:flex;
+//	width: 126px;
+//	height: 180px;
+//	background-color: red;
+//	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
 .square--inside{
 	width:120px;
-	height:120px;
-	background-color:magenta;
-	top:820px;
+	height:0px;
+	border-top:200px solid #2196F3;
+	border-left:25px solid transparent ;
+	border-right:25px solid transparent;
+//	background-color:magenta;
+//	top:820px;
 //	animation-name:filling ;
 //	animation-duration:4s ;
 	animation:filling infinite 4s;	
-	transform-origin:bottom ;
+	transform-origin:bottom;
 }
 .square--inside:hover{
 	animation-play-state:initial; 	
@@ -100,7 +113,7 @@ body {
 	width:110px;
 	height:110px;
 	align-items:bottom;
-	background-color:lightpink;
+	background-color:#eceff1;
 	top:10px;
 	position:absolute;
 	justify-content:center;

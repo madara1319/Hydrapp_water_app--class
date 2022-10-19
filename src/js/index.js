@@ -28,7 +28,7 @@ console.log((parseInt(waterLevel)-10)/12);
 const glass=(parseInt(waterLevel)-10)/12;
 const fullGlass=12 * glass + 'px';
 
-square2Inside.style.backgroundColor='blue';
+square2Inside.style.backgroundColor='#2196F3';
 
 if (i>=0){
 	substract.addEventListener("click",()=>{
