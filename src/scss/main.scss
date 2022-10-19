@@ -97,20 +97,21 @@ body {
 	width:120px;}
 }
 .square2{
-	width:120px;
-	height:120px;
+	width:110px;
+	height:110px;
 	align-items:bottom;
 	background-color:lightpink;
 	top:10px;
 	position:absolute;
 	justify-content:center;
-	align-items:center;
+	align-items:flex-end;
 	display:flex;
+	padding:10px;
 
 }
 .square2Inside{
 	width:100px;
-	height:100px;
+	height:1px;
 	transform-origin:bottom ;
 	background-color:darkgreen;
 //	top:820px;

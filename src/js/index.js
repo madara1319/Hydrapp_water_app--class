@@ -12,46 +12,37 @@ const localCounter=document.querySelector(".counter--js");
 const add=document.querySelector('.add');
 const substract=document.querySelector('.substract');
 let i =0;
+let H=0;
 i=localStorage.getItem('counter');
-
+H=localStorage.getItem('globalHeight');
 const Click = ()=> {
 	localCounter.innerHTML=`${i}`;
 	localStorage.setItem('counter',i);
+	localStorage.setItem('globalHeight',(square2Inside.style.height));
 }
 localCounter.innerHTML=`${localStorage.getItem('counter')}`;
-//
-//if (localStorage.getItem('counter')>0){
-//	const i=localStorage.getItem('counter');
-//}
-//else 
-//{
-//	const i=0;
-//
-//}
-//
-//
+square2Inside.style.height=`${localStorage.getItem('globalHeight')}`;
+const square2style=getComputedStyle(square2);
+const waterLevel=square2style.height; 
+console.log((parseInt(waterLevel)-10)/12);
+const glass=(parseInt(waterLevel)-10)/12;
+const fullGlass=12 * glass + 'px';
 
-const square2Inside_style=getComputedStyle(square2Inside);
-const waterLevel=square2Inside_style.height; 
-console.log(waterLevel);
-console.log(typeof(waterLevel));
-console.log((parseInt(waterLevel))/12);
-const glass=parseInt(waterLevel)/12;
-
-const square2Inside_color=square2Inside_style.backgroundColor;
-console.log(square2Inside_color);
-
-//square2Inside.style.height='5px';
 square2Inside.style.backgroundColor='blue';
-//	if (square2Inside.style.height>12 * glass + 'px'){
-//		square2Inside.style.height=12 * glass + 'px';	
 
 if (i>=0){
 	substract.addEventListener("click",()=>{
 		i--;
-		square2Inside.style.height = i * glass + 'px';
-		console.log(i);
-		console.log(typeof(i));
+		H = i * glass + 'px';
+		square2Inside.style.height=H;
+		const localHeight = parseInt(H);
+		//square2Inside.style.height = i * glass + 'px';
+		//const localHeight=parseInt(square2Inside.style.height);
+		console.log(localHeight);
+		console.log(typeof(localHeight));
+		if (localHeight>=12 * glass){
+			square2Inside.style.height=12 * glass + 'px'; 						
+		}
 		if (i<0) {
 			i=0;
 			console.log(i);
@@ -60,15 +51,21 @@ if (i>=0){
 	})
 
 	add.addEventListener("click",()=>{
-		square2Inside.style.height = i * glass + 'px'; 	
-		i++;	
-		console.log(i);
-		console.log(typeof(i));
+		i++;
+		H = i * glass + 'px';
+		square2Inside.style.height=H; 
+		const localHeight = parseInt(H);
+		//square2Inside.style.height = i * glass + 'px'; 
+	//	const localHeight=parseInt(square2Inside.style.height);
+		console.log(localHeight);
+		console.log(typeof(localHeight));
+		if (localHeight>=12 * glass){
+			square2Inside.style.height=12 * glass + 'px'; 					
+		}
 		if (i<0) {
 			i=0;
 			console.log(i);
 		}
-
 
 })
 }
