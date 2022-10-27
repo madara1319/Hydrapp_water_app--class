@@ -104,10 +104,17 @@ body {
 @keyframes filling{
 	from{//height:0px; 
 	transform:scale(1,0);
-	width:120px;}
+	width:120px;
+	border-right-width:0px;
+	border-left-width:0px ;
+	border-top-width:5px;}
 	to{//height:480px; 
 	transform:scale(1,1);
-	width:120px;}
+	width:120px;
+	border-right-width:25px ;
+	border-left-width:25px ;
+	border-top-width:200px ;
+}
 }
 .square2{
 	width:110px;
@@ -144,7 +151,10 @@ body {
 	border-top:210px solid #eceff1;
 	border-left:25px solid transparent;
 	border-right:25px solid transparent;
+//	border-bottom:25px solid #eceff1;
 	align-items:bottom;
+	border-radius:15px;
+	margin:15px;
 	height:0px;
 //	background-color:#eceff1;
 	top:20px;
@@ -161,7 +171,8 @@ body {
 	border-top:200px solid #2196f3;
 	border-left:25px solid transparent;
 	border-right:25px solid transparent;
-	transform-origin:bottom ;
+	margin-bottom:15px;
+//	transform-origin:bottom ;
 //	background-color:darkgreen;
 //	top:820px;
 }
