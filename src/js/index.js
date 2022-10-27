@@ -8,6 +8,8 @@ import '../scss/main.scss';
 
 const square2=document.querySelector('.square2');
 const square2Inside=document.querySelector('.square2Inside');
+const square3Inside=document.querySelector('.square3Inside');
+const square3=document.querySelector('.square3');
 const localCounter=document.querySelector(".counter--js");
 const add=document.querySelector('.add');
 const substract=document.querySelector('.substract');
@@ -29,11 +31,15 @@ const glass=(parseInt(waterLevel)-10)/12;
 const fullGlass=12 * glass + 'px';
 
 square2Inside.style.backgroundColor='#2196F3';
+square3Inside.style.borderTopWidth='100px';
+square3Inside.style.borderLeftWidth='12px';
+square3Inside.style.borderRightWidth='12px';
 
 if (i>=0){
 	substract.addEventListener("click",()=>{
 		i--;
 		H = i * glass + 'px';
+//		square3Inside.style.borderTopWidth
 		square2Inside.style.height=H;
 		const localHeight = parseInt(H);
 		//square2Inside.style.height = i * glass + 'px';
