@@ -25,15 +25,15 @@ const Click = ()=> {
 localCounter.innerHTML=`${localStorage.getItem('counter')}`;
 square2Inside.style.height=`${localStorage.getItem('globalHeight')}`;
 const square2style=getComputedStyle(square2);
-const waterLevel=square2style.height; 
+const waterLevel=square2style.height
 console.log((parseInt(waterLevel)-10)/12);
 const glass=(parseInt(waterLevel)-10)/12;
 const fullGlass=12 * glass + 'px';
 
 square2Inside.style.backgroundColor='#2196F3';
-square3Inside.style.borderTopWidth='100px';
-square3Inside.style.borderLeftWidth='12px';
-square3Inside.style.borderRightWidth='12px';
+square3Inside.style.borderTopWidth='180px';
+square3Inside.style.borderLeftWidth='25px';
+square3Inside.style.borderRightWidth='25px';
 
 if (i>=0){
 	substract.addEventListener("click",()=>{
